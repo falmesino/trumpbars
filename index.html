@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./style.css">
+        <title>Trumpbars&trade;</title>
+    </head>
+    <body>
+        
+        <div class="branding">
+            <div class="branding__image">
+                <img src="./lord-trump.jpg" alt="Lord Trump">
+            </div><!--/ .branding__image -->
+            <div class="branding__text">
+                <h1>Trumpbars&trade;</h1>
+                <p>Murica's best progress bars in action</p>
+            </div><!--/ .branding__text -->
+        </div><!-- / .branding -->
+        
+        <div class="trumpbars">
+            <div class="trumpbars-bars">
+                <div class="trumpbars-bars__bar magenta" data-width="20%"></div>
+                <div class="trumpbars-bars__bar yellow" data-width="80%"></div>
+                <div class="trumpbars-bars__bar teal" data-width="100%"></div>
+            </div><!-- / .trumpbars-bars -->
+            <div class="trumpbars-indicator">
+                <ul>
+                    <li><span>0m</span></li><li>
+                    <span>2m</span></li><li>
+                    <span>4m</span></li><li>
+                    <span>6m</span></li><li>
+                    <span>8m</span></li><li>
+                    <span>10m</span></li><li>
+                    <span>12m</span></li><li>
+                    <span>14m</span></li><li>
+                    <span>16m</span></li><li>
+                    <span>20m</span></li>
+                </ul>
+            </div><!-- / .trumpbars-indicator -->
+        </div><!-- / .trumpbars -->
+        
+        <script src="./jquery-1.11.1.min.js"></script>
+        <script>
+            $(function(){
+                $('.trumpbars-bars__bar').each(function(index, value){
+                    var width = $(this).attr('data-width');
+                    // With animation
+                    $(this).stop().animate({
+                        width: width
+                    }, 600);
+                    // Without animation
+                    //$(this).css('width', width);
+                });
+            });
+        </script>
+        
+    </body>
+</html>
